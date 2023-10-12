@@ -89,7 +89,7 @@ class GamePortingToolkit < Formula
     ENV.append_to_cflags "-O3 -Wno-implicit-function-declaration -Wno-format -Wno-deprecated-declarations -Wno-incompatible-pointer-types"
     # Use an older deployment target to avoid new dyld behaviors.
     # The custom compiler is too old to accept "13.0", so we use "10.14".
-    ENV["MACOSX_DEPLOYMENT_TARGET"] = "10.14"
+    ENV["MACOSX_DEPLOYMENT_TARGET"] = "14.0"
 
     wine_configure_options = ["--prefix=#{prefix}",
                               "--disable-win16",
